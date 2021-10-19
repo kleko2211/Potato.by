@@ -1,0 +1,59 @@
+// main: ../style.less
+
+.nav{
+  display: flex;
+  height: 100%;
+}
+
+.nav__link {
+  display: inline-block;
+  margin-left: 2rem;
+  position: relative;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: @FBPointing;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+
+  border-radius: 1.6rem;
+
+  @media @notebook {
+    font-size: 1.2rem;
+  }
+
+  @media @tablet {
+  font-size: 1.1rem;
+}
+
+  @media @mobile {
+    font-size: 1rem;
+  }
+
+  @media @mobile {
+    font-size: 1rem;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0.13rem;
+    opacity: 0;
+    transition: opacity, width .2s linear;
+    background-color: @FBPointing;
+
+    position: absolute;
+    bottom: -.3rem;
+    left: 0;
+    z-index: 1;
+  }
+
+  &:hover,
+  &:active {
+    &:after {
+      opacity: 1;
+      width: 100%;
+    }
+  }
+}

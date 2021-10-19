@@ -1,0 +1,86 @@
+// main: ../style.less
+
+.about {
+  margin: 4rem auto 2rem;
+  max-width: 1200px;
+
+  &:after {
+    content: "";
+    display: block;
+    margin: 3rem auto 0;
+    width: 6rem;
+    height: 0.13rem;
+    background-color: @FluggerIbenholt;
+  }
+}
+
+.about__header {
+  margin: 1rem auto 2rem;
+  font-family: 'Caveat', cursive;
+  text-align: center;
+  font-size: 2rem;
+  color: @FMDGray;
+
+  @media @mobile-sm {
+    margin: 1rem 0 1rem;
+  }
+
+}
+
+.about__inner {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+
+  @media @mobile-sm {
+    display: block;
+  }
+}
+
+
+.about__photo {
+  width: 50%;
+
+}
+
+.img {
+  display: block;
+  max-width: 100%;
+
+  @media @mobile-sm {
+    display: none;
+  }
+}
+
+.about__content {
+  width: 50%;
+  padding: 0 2rem;
+
+  @media @mobile-sm {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.about__title {
+  font-size: 1.6rem;
+  font-family: 'Monserrat', sans-serif;
+  color: @GMGray;
+}
+
+.about__bigtitle {
+  font-family: 'Caveat', cursive;
+  font-size: 1.5rem;
+  color: #424242;
+
+}
+
+.about__text {
+  font-size: 1rem;
+  text-align: left;
+  color: gray;
+}
+
+.about__text-paragraph {
+}
+

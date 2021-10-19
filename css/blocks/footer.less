@@ -1,0 +1,98 @@
+// main: ../style.less
+
+@import "../vars";
+
+.footer {
+  margin-top: 6rem;
+  height: auto;
+  background: url("@{imagesPath}footer-background-(1600x250).png") center no-repeat;
+  background-size: cover;
+  color: #424242;
+  box-shadow: 0 0 7px rgb(0 0 0 / 30%);
+}
+
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+
+  @media @mobile-sm {
+    justify-content: start;
+    align-items: end;
+  }
+}
+
+.footer__block {
+  padding: 1em;
+  width: 33.333333%;
+  text-align: center;
+
+
+  @media @mobile {
+    padding: .7rem;
+  }
+
+  @media @mobile-sm {
+    padding: .5rem;
+    width: 33%;
+  }
+}
+
+.footer__title {
+  margin-bottom: .5em;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: @FluggerIbenholt;
+
+  @media @tablet {
+    font-size: 1rem;
+  }
+}
+
+.footer__subtitle {
+  font-size: 1rem;
+
+  @media @mobile {
+    font-size: .9rem;
+  }
+}
+
+.address, .telephones {
+  display: flex;
+  flex-direction: column;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+}
+
+.social__item {
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin-right: 4px;
+  border: 2px solid @FluggerIbenholt;
+  border-radius: .2em;
+  transition: background-color .2s linear, border .2s linear;
+  cursor: pointer;
+
+  &:hover {
+    background-color: @FluggerIbenholt;
+    border: @FluggerIbenholt;
+  }
+}
+
+.social__icon {
+  display: block;
+  fill: rgba(40, 40, 38, 0.65);
+  height: 1.7em;
+  transition: fill .2s linear;
+
+  &:hover {
+    fill: @FBPointing;
+  }
+}

@@ -1,0 +1,93 @@
+// main: ../style.less
+
+.intro {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+
+  background: linear-gradient(45deg, rgba(51, 51, 51, 0.4) 7%, rgba(51, 51, 51, 0.6) 73%), url("@{imagesPath}main-intro.jpg"), center no-repeat;
+  background-size: cover;
+}
+
+.intro__inner {
+  width: 100%;
+  max-width: 45rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro__title {
+  color: @FBPointing;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.2;
+
+  &:after {
+    content: "";
+    display: block;
+    margin: 3rem auto 3rem;
+    width: 5rem;
+    height: 0.14rem;
+    background-color: @FBPointing;
+
+    @media @mobile-sm {
+      height: .13rem;
+    }
+  }
+
+  @media @tablet {
+    font-size: 2rem;
+
+  }
+}
+
+.intro__suptitle {
+  margin-bottom: 1rem;
+  color: @FBPointing;
+  font-family: 'Caveat', cursive;
+  font-size: 3rem;
+  font-weight: 500;
+
+  @media @tablet {
+    font-size: 2.5rem;
+  }
+}
+
+.intro__video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.video {
+  border: none;
+
+  @media @mobile-sm {
+    width: 450px;
+    height: 280px;
+  }
+}
+
+.intro__button {
+  display: inline-block;
+  vertical-align: top;
+  padding: 1rem;
+  border: .2rem solid @FBPointing;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: @FBPointing;
+  transition: background-color .2s linear, color .2s linear;
+
+  &:hover {
+    background-color: @FBPointing;
+    color: @GMGray;
+  }
+}
